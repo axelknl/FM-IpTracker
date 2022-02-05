@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Tracker</title>
+    <link rel="icon" href="assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="home">
+
+        <div class="background">
+            <div class="pattern"></div>
+            <div id="map" class="map"></div>
+        </div>
+
+        <div class="content">
+            <h1 class="title">IP Address Tracker</h1>
+            <div class="search">
+                <input id="searchIPinput" placeholder="Search for any IP address or domain" type="text" class="search--bar bar">
+                <div class="search--button button" onclick="findIp()">
+                    <img src="assets/icon-arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <div class="info--case case m-bottom">
+                    <h3 class="info--title title">ip adress</h3>
+                    <p id="ipAdress" class="info--data data"></p>
+                </div>
+                <div class="info--case case border-left m-bottom">
+                    <h3 class="info--title title">location</h3>
+                    <p id="ipLocation" class="info--data data"></p>
+                </div>
+                <div class="info--case case border-left m-bottom">
+                    <h3 class="info--title title">timezone</h3>
+                    <p id="ipTime" class="info--data data"></p>
+                </div>
+                <div class="info--case case border-left">
+                    <h3 class="info--title title">isp</h3>
+                    <p id="ipISP" class="info--data data"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
